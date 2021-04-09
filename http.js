@@ -22,8 +22,20 @@ const server=http.createServer(function(req,res){
     if(req.url=='/about'){
         res.end('here is the short story');
     }
-    res.end(`<h1>Oops!</h1><br>
-    <p>The page you're looking for is not found</p><br>
-    <a href="/">redirect</a>`);
+    res.end('error')
 })
 server.listen(5000);
+
+
+
+/*
+const http=require('http');
+const server=http.createServer(function(req,res){
+    console.log('req event');
+    res.write('<h1>Welcome</h1><br><p>Good Afternoon</p>')
+    res.end('Success');
+})
+server.listen(5000,function(){
+    console.log('server listening');
+})
+*/
