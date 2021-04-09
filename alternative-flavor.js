@@ -4,4 +4,4 @@ const person={
 }
 
 module.exports.singlePerson=person;
-//git update
+//git updates
