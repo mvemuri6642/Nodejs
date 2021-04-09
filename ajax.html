@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>AJAX</title>
+    </head>
+    <body>
+        <p id="p1">Hello</p>
+        <input type="button" value="Click" id="b1" onclick="loadDoc()">
+    </body>
+    <script type="text/javascript">
+        function loadDoc(){
+                var xhttp= new XMLHttpRequest();
+                xhttp.open("GET","ajax1.txt",true);
+                xhttp.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200){
+                        document.getElementById("p1").innerHTML=this.responseText;
+                        console.log(this.responseText);
+                    }
+                };
+                xhttp.send();
+        }
+    </script>
+</html>
