@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            .myDiv{
+                display:flex;
+                margin: 10px auto;
+            }
+        </style>
+    </head>
+    <body onload="myFun()">
+        <div class="myDiv"></div>
+        <button type="button" id="b1">Click</button><br>
+        <script>
+            function myFun(){
+                const arr=[
+                    {source:"https://mvemuri6642.github.io/profile-img.jpg"},
+                    {source:"https://mvemuri6642.github.io/coursera.png"},
+                    {source:"https://mvemuri6642.github.io/srkr.jpg"},
+                    {source:"https://mvemuri6642.github.io/facebook.jpg"}
+                ]
+                for(let i=0;i<arr.length;i++){
+                    
+                    // var para=document.createElement("p");
+                    // para.innerHTML="Hello";
+                    // document.body.appendChild(para);
+                    var image=document.createElement('img');
+                    image.src=arr[i]["source"];
+                    image.classList.add('myDiv');
+                    image.width="600";
+                    image.height="400";
+                    image.style.borderRadius="30px";
+                    document.body.appendChild(image);
+                }  
+            }
+        </script>
+    </body>
+</html>
